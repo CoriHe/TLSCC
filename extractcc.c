@@ -661,9 +661,9 @@ void connection_terminated () {
    }
 
    // Print out the statistics
-   int avgbpr = tcpbytes/a_records;
-   int dtime = timems() - a_time;
-   long bps = tcpbytes*1000L/dtime;
+   int  dtime = timems() - a_time;
+   int avgbpr = (a_records > 0) ? tcpbytes/a_records   : -1;
+   long   bps = (dtime > 0)     ? tcpbytes*1000L/dtime : -1;
    verb(a_verb, "Connection terminated.\n");
    verb(a_verb, "Bytes   total: %6d\n", tcpbytes);
    verb(a_verb, "Records total: %6d\n", a_records);
