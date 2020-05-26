@@ -53,24 +53,25 @@ libpcap   (for packet capturing)
 
 # Compilation
 
-If necessary, edit the paths in the Makefile for openssl, then just run make
+If necessary, edit the paths in the Makefile for openssl, then just run make  
 
 # Example
 
-First, start the extract program on an interface, that can see the TLS connection.
-This can for example be the outgoing interface of the host, that runs the tlscc
-program. The program must run as root, since it needs raw access to the network
-traffic.
+First, start the extract program on an interface, that can see the TLS connection.  
+This can for example be the outgoing interface of the host, that runs the tlscc program.  
+The program must run as root, since it needs raw access to the network traffic.  
 
 $ sudo ./extractcc -vi eth1 &  
 Listening for TLS connections on interface eth1...  
 
-Then, run the tlscc injector. This command connects to the https service of
+Then, run the tlscc injector.  
+This command connects to the https service of
 the FernUniversitaet in Hagen and injects the content of the local file
 "/etc/motd".
 
 $ ./tlscc -qh www.fernuni-hagen.de -f /etc/motd  
 Trying 132.176.XXX.XXX... Success!  
+
 The extractor should see the connection and extract the covert data.  
 TLS hello detected, tracking connection...  
 Found TLS covert channel signature in connection 192.168.0.100:39318 -> 132.176.XXX.XXX:443  
