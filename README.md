@@ -37,7 +37,7 @@ License: Creative Commons Zero (CC0)
 # extractcc
 A program to extract data from a covert channel using the TLS protocol                                                 
 
-THis program passively listens on a network interface for TLS connections
+This program passively listens on a network interface for TLS connections
 with covert data and extracts this covert data from the stream. The TLS
 stream itself is neither modified nor decrypted.
 
@@ -75,15 +75,26 @@ Trying 132.176.XXX.XXX... Success!
 The extractor should see the connection and extract the covert data.
 
 TLS hello detected, tracking connection...
+
 Found TLS covert channel signature in connection 192.168.0.100:39318 -> 132.176.XXX.XXX:443
+
 [IV-FILE] extract.motd.IV.2 (286 bytes)
+
 Time elapsed             : 266 ms
+
 Total  bytes transmitted : 3221 bytes
+
 Covert bytes transmitted : 296 bytes
+
 Covert bytes pending     : 0 bytes
+
 Total          bandwidth : 96.87 kbit/s
+
 Covert channel bandwidth : 8.90 kbit/s
+
 Covert channel percentage: 9.19%
+
 266,3221,296,0,296,0,0
+
 Connection terminated by FIN, Setting timeout to 3 secs
 
